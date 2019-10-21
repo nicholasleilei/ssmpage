@@ -23,14 +23,17 @@ public class StudentController {
 	
 	@RequestMapping("findAll")
 	public String findAll(Map<String,Object> map,@RequestParam(defaultValue="1")int page) {
-    System.out.print("888888888");
+
+		System.out.println("111111111111");
+
+
 		int size=3;
 		PageHelper.startPage(page, size);
 		List<Stu> stus =ss.findAll();
 		PageInfo<Stu> pageinfo = new PageInfo<>(stus, size);
 		map.put("stus", stus);
 		map.put("page",pageinfo);
-		System.out.println();
+		System.out.println("11111111111");
 		return "../main.jsp";
 	}
 	
