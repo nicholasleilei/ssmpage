@@ -23,7 +23,7 @@ public class StudentController {
 	
 	@RequestMapping("findAll")
 	public String findAll(Map<String,Object> map,@RequestParam(defaultValue="1")int page) {
-    System.out.print("888888888");
+    System.out.print("88888888998");
 		int size=3;
 		PageHelper.startPage(page, size);
 		List<Stu> stus =ss.findAll();
