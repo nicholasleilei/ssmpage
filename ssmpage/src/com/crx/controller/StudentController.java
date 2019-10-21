@@ -24,6 +24,7 @@ public class StudentController {
 	@RequestMapping("findAll")
 	public String findAll(Map<String,Object> map,@RequestParam(defaultValue="1")int page) {
 		System.out.println("123123123");
+
 		int size=3;
 		PageHelper.startPage(page, size);
 		List<Stu> stus =ss.findAll();
